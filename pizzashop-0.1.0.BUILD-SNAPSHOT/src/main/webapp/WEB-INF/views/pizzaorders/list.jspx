@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myproject_pizzashop_domain_PizzaOrder" items="${pizzaorders}" z="PlOcIMpD1eTpo80WNqojev0h9Ns=">
+        <table:table data="${pizzaorders}" id="l_com_myproject_pizzashop_domain_PizzaOrder" path="/pizzaorders" z="s3y5weYbflNZtoWY1JRXWEYJVCQ=">
+            <table:column id="c_com_myproject_pizzashop_domain_PizzaOrder_name" property="name" z="73xSPTOkHGrpdwbdbrBTvDU9j/g="/>
+            <table:column id="c_com_myproject_pizzashop_domain_PizzaOrder_address" property="address" z="3Wcz67Y+9jLsdK78FkuDtCBLVso="/>
+            <table:column id="c_com_myproject_pizzashop_domain_PizzaOrder_total" property="total" z="VkLOZ0S2KepRITSEUdkLWej5G3U="/>
+            <table:column date="true" dateTimePattern="${pizzaOrder_deliverydate_date_format}" id="c_com_myproject_pizzashop_domain_PizzaOrder_deliveryDate" property="deliveryDate" z="Q4JePlshmlwrcyq25g1FT6MVPPA="/>
+            <table:column id="c_com_myproject_pizzashop_domain_PizzaOrder_pizzas" property="pizzas" z="O+p3mERhYJ3MKU20wndLsMP4jUk="/>
+        </table:table>
+    </page:list>
+</div>

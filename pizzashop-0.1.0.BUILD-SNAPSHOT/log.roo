@@ -1,0 +1,34 @@
+// Spring Roo 1.3.0.RELEASE [rev f425090] log opened at 2015-02-02 15:35:51
+project --topLevelPackage com.myproject.pizzashop 
+hint
+jpa setup --database MYSQL --provider HIBERNATE --databaseName pizzashop --password root --userName root
+hint
+entity jpa --class ~.domain.Base 
+field string --fieldName name --notNull --sizeMin 2
+entity jpa --class ~.domain.Topping 
+field string --fieldName name --notNull --sizeMin 2
+entity jpa --class ~.domain.Pizza
+field string --fieldName name --notNull --sizeMin 2
+field number --fieldName price --type java.lang.Float
+field set --fieldName toppings --type ~.domain.Topping
+field reference --fieldName base --type ~.domain.Base
+entity jpa --class ~.domain.PizzaOrder
+field string --fieldName name --notNull --sizeMin 2
+field string --fieldName address --sizeMin 2
+field number --fieldName total --type java.lang.Float
+field date --fieldName deliveryDate --type java.util.Date
+field set --fieldName pizzas --type ~.domain.Pizza
+test integration --entity ~.domain.Pizza
+test integration --entity ~.domain.PizzaOrder
+test integration --entity ~.domain.Topping
+test integration --entity ~.domain.Base
+focus --class ~.domain.PizzaOrder
+perform tests
+exit
+// Spring Roo 1.3.0.RELEASE [rev f425090] log closed at 2015-02-02 16:10:14
+// Spring Roo 1.3.0.RELEASE [rev f425090] log opened at 2015-02-02 16:15:17
+web mvc setup
+web mvc all --package com.myproject.pizzashop.domain
+web mvc all --package ~.domain.web
+exit
+// Spring Roo 1.3.0.RELEASE [rev f425090] log closed at 2015-02-02 16:36:47
