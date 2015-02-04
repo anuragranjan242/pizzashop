@@ -7,5 +7,6 @@ public class BaseIntegrationTest {
 
     @Test
     public void testMarkerMethod() {
+    	System.out.println("Helloo JAVA ooooo");
     }
 }
